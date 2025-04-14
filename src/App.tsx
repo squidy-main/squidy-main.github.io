@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -24,7 +24,7 @@ const Router = () => {
       delete (window as any).INITIAL_ROUTE;
       
       // Get the current location without the base path
-      const currentPath = window.location.pathname.replace('/squidY', '');
+      const currentPath = window.location.pathname.replace('/squidy-main.github.io', '');
       
       // Only navigate if we're not already at the right location
       if (currentPath !== initialRoute && currentPath !== '/') {
@@ -52,9 +52,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/squidY">
+      <HashRouter>
         <Router />
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

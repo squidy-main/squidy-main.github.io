@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/squidy-main.github.io/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>squidY - Premium Website Creation & AI Tools</title>
+    <title>Squidy</title>
     <meta name="description" content="squidY is a premier website creation agency specializing in innovative digital solutions and cutting-edge AI tools." />
     <meta name="author" content="squidY" />
 
@@ -19,25 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- GitHub Pages Routing Script -->
-    <script type="text/javascript">
-      // Check if we need to redirect
-      (function() {
-        const redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          sessionStorage.removeItem('redirect');
-          // When the app loads, it will read this value and navigate accordingly
-          window.INITIAL_ROUTE = redirect;
-        }
-      })();
-    </script>
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>

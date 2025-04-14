@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { ArrowUp, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { ArrowUp, Github, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -22,11 +22,11 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <a href="#" className="inline-block mb-6">
+            <Link to="/" className="inline-block mb-6">
               <span className="text-2xl font-semibold tracking-tighter text-white">
                 squid<span className="text-squid-silver">Y</span>
               </span>
-            </a>
+            </Link>
             
             <p className="text-white mb-6 max-w-xs">
               Crafting innovative digital experiences and AI solutions for forward-thinking businesses.
@@ -34,104 +34,89 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
-                className="text-white hover:text-squid-pastel-blue transition-colors"
-                aria-label="Twitter"
+                href="https://github.com/VGsaksham" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-squid-charcoal hover:bg-squid-purple flex items-center justify-center transition-colors"
               >
-                <Twitter size={20} />
+                <Github size={20} />
               </a>
               <a 
-                href="#" 
-                className="text-white hover:text-squid-pastel-blue transition-colors"
-                aria-label="Instagram"
+                href="https://www.instagram.com/bhown_pb30?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-squid-charcoal hover:bg-squid-purple flex items-center justify-center transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a 
-                href="#" 
-                className="text-white hover:text-squid-pastel-blue transition-colors"
-                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/saksham-b-635876215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-squid-charcoal hover:bg-squid-purple flex items-center justify-center transition-colors"
               >
                 <Linkedin size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-white hover:text-squid-pastel-blue transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-medium text-white mb-6">Quick Links</h3>
-            <ul className="space-y-4">
-              {['Home', 'Services', 'Projects', 'About', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`} 
-                    className="text-white hover:text-squid-pastel-blue transition-colors inline-block"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-squid-silver hover:text-white transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-squid-silver hover:text-white transition-colors">Services</Link>
+              </li>
+              <li>
+                <Link to="/projects" className="text-squid-silver hover:text-white transition-colors">Projects</Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-squid-silver hover:text-white transition-colors">About</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-squid-silver hover:text-white transition-colors">Contact</Link>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-medium text-white mb-6">Services</h3>
-            <ul className="space-y-4">
-              {[
-                'Website Design', 
-                'Web Development', 
-                'AI Solutions', 
-                'UX/UI Design', 
-                'Full-Stack Solutions'
-              ].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="/services" 
-                    className="text-white hover:text-squid-pastel-blue transition-colors inline-block"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-squid-silver hover:text-white transition-colors">Web Development</Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-squid-silver hover:text-white transition-colors">AI Solutions</Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-squid-silver hover:text-white transition-colors">UX/UI Design</Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-squid-silver hover:text-white transition-colors">Brand Identity</Link>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-medium text-white mb-6">Legal</h3>
-            <ul className="space-y-4">
-              {[
-                'Privacy Policy', 
-                'Terms of Service', 
-                'Cookie Policy', 
-                'Accessibility'
-              ].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="#" 
-                    className="text-white hover:text-squid-pastel-blue transition-colors inline-block"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/contact" className="text-squid-silver hover:text-white transition-colors">Get in Touch</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-squid-silver hover:text-white transition-colors">Support</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-squid-silver hover:text-white transition-colors">Careers</Link>
+              </li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-white text-sm">
-            &copy; {new Date().getFullYear()} squidY. All rights reserved.
-          </p>
-          
-          <p className="text-white text-sm">
-            Designed and developed with precision and excellence.
-          </p>
+        <div className="mt-12 pt-8 border-t border-squid-charcoal text-center text-squid-silver">
+          <p>&copy; {new Date().getFullYear()} squidY. All rights reserved.</p>
         </div>
       </div>
     </footer>

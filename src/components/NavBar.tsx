@@ -78,7 +78,7 @@ const NavBar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'nav-blur py-3' : 'py-6 bg-white'
+      scrolled ? 'nav-blur py-2 md:py-3' : 'py-3 md:py-6 bg-white'
     }`}>
       <div 
         ref={navBlobRef} 
@@ -98,7 +98,7 @@ const NavBar = () => {
           <nav className="flex items-center justify-end">
             <div 
               ref={navContainerRef}
-              className="nav-container relative flex items-center justify-center h-12 bg-white/50 backdrop-blur-sm glass-effect rounded-full px-2 overflow-x-auto scrollbar-none"
+              className="nav-container relative flex items-center justify-center h-10 md:h-12 bg-white/50 backdrop-blur-sm glass-effect rounded-full px-2 overflow-x-auto scrollbar-none"
             >
               {/* Liquid bubble for active link */}
               <div 
