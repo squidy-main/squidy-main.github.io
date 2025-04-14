@@ -78,7 +78,7 @@ const NavBar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'nav-blur py-1 md:py-3' : 'py-2 md:py-6 bg-white'
+      scrolled ? 'nav-blur py-2 md:py-3' : 'py-3 md:py-6 bg-white'
     }`}>
       <div 
         ref={navBlobRef} 
@@ -98,12 +98,12 @@ const NavBar = () => {
           <nav className="flex items-center justify-end">
             <div 
               ref={navContainerRef}
-              className="nav-container relative flex items-center justify-center h-8 md:h-12 bg-white/50 backdrop-blur-sm glass-effect rounded-full px-1 md:px-2 overflow-x-auto scrollbar-none"
+              className="nav-container relative flex items-center justify-center h-10 md:h-12 bg-white/50 backdrop-blur-sm glass-effect rounded-full px-1 md:px-2 overflow-x-auto scrollbar-none"
             >
               {/* Liquid bubble for active link */}
               <div 
                 ref={activeBubbleRef}
-                className="absolute top-1/2 -translate-y-1/2 h-8 md:h-10 bg-squid-pastel-blue/40 rounded-full transition-all duration-700 ease-in-out shadow-sm"
+                className="absolute top-1/2 -translate-y-1/2 h-10 md:h-12 bg-squid-pastel-blue/40 rounded-full transition-all duration-700 ease-in-out shadow-sm"
                 style={{ opacity: 0, width: '60px', left: '0' }}
               ></div>
               
@@ -111,7 +111,7 @@ const NavBar = () => {
                 <Link 
                   key={index} 
                   to={link.href}
-                  className={`relative px-2 md:px-5 py-1 text-xs md:text-sm transition-all duration-300 rounded-full wavy-border z-10 ${
+                  className={`relative px-2 md:px-5 py-2 text-xs md:text-sm transition-all duration-300 rounded-full wavy-border z-10 ${
                     activeLink === link.href ? "text-squid-dark font-medium" : "text-squid-gray hover:text-squid-dark"
                   }`}
                   onClick={() => {
