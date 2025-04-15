@@ -32,9 +32,13 @@ jobs:
       
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_URL: /squidy-main.github.io/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          static_site_generator: vite
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
