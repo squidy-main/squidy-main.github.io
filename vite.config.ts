@@ -16,7 +16,7 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
+        app: path.resolve(__dirname, 'index.html')
       }
     }
   },
