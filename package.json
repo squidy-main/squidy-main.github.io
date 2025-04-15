@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://squidy-main.github.io/squidy-main.github.io",
+  "homepage": "https://squidy-main.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
