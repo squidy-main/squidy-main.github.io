@@ -156,22 +156,24 @@ const HeroSection = () => {
             <div className="w-full aspect-square relative perspective-container">
               <div className="absolute inset-0 w-full h-full rounded-lg bg-gradient-to-br from-squid-pastel-purple/20 to-squid-pastel-blue/20 transform rotate-6 transition-all duration-500 hover:rotate-3"></div>
               
-              <div className="absolute top-10 right-10 p-6 bg-white rounded-lg shadow-lg z-10 max-w-xs transform transition-all duration-500 hover:-translate-y-2">
-                <Zap size={32} className="text-squid-dark mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Fast & Responsive</h3>
-                <p className="text-squid-gray text-sm">We build lightning-fast websites that provide exceptional user experiences on all devices.</p>
-              </div>
-              
-              <div className="absolute bottom-10 left-10 p-6 bg-white rounded-lg shadow-lg z-10 max-w-xs transform transition-all duration-500 hover:-translate-y-2">
-                <Sparkles size={32} className="text-squid-dark mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Creative Design</h3>
-                <p className="text-squid-gray text-sm">Our design approach focuses on creating unique visual identities that elevate brands.</p>
-              </div>
-              
-              <div className="absolute top-1/2 left-1/3 transform -translate-y-1/2 p-6 bg-white rounded-lg shadow-lg z-20 max-w-xs transition-all duration-500 hover:-translate-y-4">
-                <Lightbulb size={32} className="text-squid-dark mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Innovative Solutions</h3>
-                <p className="text-squid-gray text-sm">We leverage AI and cutting-edge technologies to solve complex business challenges.</p>
+              <div className="absolute inset-0 flex flex-col md:block">
+                <div className="md:absolute md:top-8 md:right-6 lg:top-10 lg:right-10 p-4 md:p-6 bg-white rounded-lg shadow-lg z-10 max-w-xs transform transition-all duration-500 hover:-translate-y-2 mb-6 md:mb-0 self-end md:self-auto">
+                  <Zap size={24} className="text-squid-dark mb-2 md:mb-4" />
+                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Fast & Responsive</h3>
+                  <p className="text-squid-gray text-xs md:text-sm">We build lightning-fast websites that provide exceptional user experiences on all devices.</p>
+                </div>
+                
+                <div className="md:absolute md:bottom-12 md:left-8 lg:bottom-10 lg:left-10 p-4 md:p-6 bg-white rounded-lg shadow-lg z-10 max-w-xs transform transition-all duration-500 hover:-translate-y-2 mb-6 md:mb-0 self-start md:self-auto">
+                  <Sparkles size={24} className="text-squid-dark mb-2 md:mb-4" />
+                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Creative Design</h3>
+                  <p className="text-squid-gray text-xs md:text-sm">Our design approach focuses on creating unique visual identities that elevate brands.</p>
+                </div>
+                
+                <div className="md:absolute md:top-1/3 md:left-1/4 lg:top-1/2 lg:left-1/3 md:transform md:-translate-y-1/2 p-4 md:p-6 bg-white rounded-lg shadow-lg z-20 max-w-xs transition-all duration-500 hover:-translate-y-2 self-center md:self-auto">
+                  <Lightbulb size={24} className="text-squid-dark mb-2 md:mb-4" />
+                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Innovative Solutions</h3>
+                  <p className="text-squid-gray text-xs md:text-sm">We leverage AI and cutting-edge technologies to solve complex business challenges.</p>
+                </div>
               </div>
             </div>
           </div>
