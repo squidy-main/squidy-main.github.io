@@ -1,9 +1,9 @@
-
-import React, { useEffect, useRef } from 'react';
-import { Code, Cpu, Layers, Palette, PenTool, TerminalSquare } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Code, Cpu, Layers, Palette, PenTool, TerminalSquare, ChevronDown, ChevronUp } from 'lucide-react';
 
 const ServicesSection = () => {
   const animatedElements = useRef<(HTMLDivElement | null)[]>([]);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,48 +33,64 @@ const ServicesSection = () => {
     animatedElements.current[index] = el;
   };
 
+  const toggleExpand = (index: number) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
   const services = [
     {
       title: 'Website Design',
       description: 'Elegant, intuitive designs focused on user experience and conversion optimization.',
       icon: Palette,
       color: 'bg-squid-pastel-blue/20',
-      borderColor: 'hover:border-squid-pastel-blue'
+      borderColor: 'hover:border-squid-pastel-blue',
+      tags: ['UI/UX', 'Responsive', 'Branding'],
+      detailedDescription: 'Our website design services blend aesthetics with functionality, creating intuitive user experiences that engage visitors and drive conversions. We focus on modern design principles, responsive layouts, and brand consistency across all devices.'
     },
     {
       title: 'Web Development',
       description: 'Responsive, robust web applications built with cutting-edge technologies.',
       icon: Code,
       color: 'bg-squid-pastel-purple/20',
-      borderColor: 'hover:border-squid-pastel-purple'
+      borderColor: 'hover:border-squid-pastel-purple',
+      tags: ['React', 'Next.js', 'TypeScript'],
+      detailedDescription: 'We build scalable, high-performance web applications using modern frameworks and technologies. Our development approach emphasizes clean code, performance optimization, and robust architecture to ensure your web application can grow with your business.'
     },
     {
       title: 'AI Solutions',
       description: 'Custom AI tools and integrations that automate and enhance your digital presence.',
       icon: Cpu,
       color: 'bg-squid-pastel-peach/20',
-      borderColor: 'hover:border-squid-pastel-peach'
+      borderColor: 'hover:border-squid-pastel-peach',
+      tags: ['Machine Learning', 'Automation', 'Integration'],
+      detailedDescription: 'Leverage the power of artificial intelligence to streamline your operations and gain insights from your data. We develop custom AI solutions that integrate with your existing systems, from chatbots and recommendation engines to data analysis tools and process automation.'
     },
     {
       title: 'UX/UI Design',
       description: 'User-centered design that balances functionality with aesthetics.',
       icon: PenTool,
       color: 'bg-squid-pastel-pink/20',
-      borderColor: 'hover:border-squid-pastel-pink'
+      borderColor: 'hover:border-squid-pastel-pink',
+      tags: ['Wireframing', 'Prototyping', 'User Testing'],
+      detailedDescription: 'Our UX/UI design process focuses on creating intuitive, delightful user experiences. We conduct user research, develop wireframes and prototypes, and iterate based on user testing to ensure your digital products are both beautiful and easy to use.'
     },
     {
       title: 'Full-Stack Solutions',
       description: 'End-to-end development from database architecture to frontend implementation.',
       icon: Layers,
       color: 'bg-squid-pastel-blue/20',
-      borderColor: 'hover:border-squid-pastel-blue'
+      borderColor: 'hover:border-squid-pastel-blue',
+      tags: ['Backend', 'Frontend', 'API Development'],
+      detailedDescription: 'We provide comprehensive full-stack development services, handling everything from database design and API development to frontend implementation. Our full-stack approach ensures seamless integration between all layers of your application.'
     },
     {
       title: 'Custom Tools',
       description: 'Bespoke software solutions tailored to your specific business requirements.',
       icon: TerminalSquare,
       color: 'bg-squid-pastel-purple/20',
-      borderColor: 'hover:border-squid-pastel-purple'
+      borderColor: 'hover:border-squid-pastel-purple',
+      tags: ['Business Tools', 'Workflows', 'Automation'],
+      detailedDescription: 'We develop custom software tools designed specifically for your unique business needs. From internal management systems and workflow automation to customer-facing portals and specialized applications, our custom tools help streamline operations and solve specific challenges.'
     }
   ];
 
@@ -101,8 +117,9 @@ const ServicesSection = () => {
             <div 
               key={index}
               ref={addRef(index + 1)}
-              className={`opacity-0 transition-all duration-300 bg-white soft-shadow rounded-lg overflow-hidden ${index % 2 === 0 ? 'animate-reveal-right' : 'animate-reveal-left'}`}
+              className={`opacity-0 transition-all duration-300 bg-white soft-shadow rounded-lg overflow-hidden ${index % 2 === 0 ? 'animate-reveal-right' : 'animate-reveal-left'} cursor-pointer`}
               style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+              onClick={() => toggleExpand(index)}
             >
               <div className={`flex flex-col md:flex-row ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
                 <div className="md:w-1/3 p-6 flex justify-center items-center">
@@ -112,16 +129,29 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="md:w-2/3 p-6 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold mb-3">{service.title}</h3>
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold">{service.title}</h3>
+                    {expandedCard === index ? 
+                      <ChevronUp className="text-squid-gray" /> : 
+                      <ChevronDown className="text-squid-gray" />
+                    }
+                  </div>
+                  
                   <p className="text-squid-gray mb-4 md:mb-6">{service.description}</p>
                   
                   <div className="flex flex-wrap gap-2 md:gap-3">
-                    {Array.from({ length: 3 }).map((_, i) => (
+                    {service.tags.map((tag, i) => (
                       <span key={i} className="px-3 py-1 bg-squid-cream rounded-full text-xs text-squid-gray">
-                        Feature {i + 1}
+                        {tag}
                       </span>
                     ))}
                   </div>
+                  
+                  {expandedCard === index && (
+                    <div className="mt-6 pt-6 border-t border-gray-100 animate-fade-in">
+                      <p className="text-squid-gray">{service.detailedDescription}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
