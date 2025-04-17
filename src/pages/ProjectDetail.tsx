@@ -67,9 +67,9 @@ const projectsData = [
     projectLink: "#",
     githubLink: "#",
     images: [
-      "/images/glass_decor_img_1.JPG",
-      "/images/glass_decor_img_2.JPG",
-      "/images/glass_decor_img_3.JPG"
+      "/images/home_decor_img_1.JPG",
+      "/images/home_decor_img_2.JPG",
+      "/images/home_decor_img_3.JPG"
     ],
     link: "https://squidy-main.github.io/sample-glass-decor-showcase/#/"
   },
