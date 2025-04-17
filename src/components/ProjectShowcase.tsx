@@ -20,14 +20,14 @@ const ProjectShowcase = () => {
       link: "https://vgsaksham.github.io/elegance.github.io/"
     },
     {
-      id: 'landlite',
-      title: "Landlite",
-      category: "Home Decor",
-      description: "An immersive showcase for premium lighting solutions and home decor products with interactive 3D previews and room visualization.",
+      id: 'glass-decor',
+      title: "Home Decor",
+      category: "Interior Design",
+      description: "A contemporary glass decor showcase featuring premium interior design products with beautiful visuals and interactive elements for enhanced shopping experience.",
       color: "bg-white",
       highlight: "border-gray-300",
       icon: Lamp,
-      link: "https://landlite.in"
+      link: "https://squidy-main.github.io/sample-glass-decor-showcase/#/"
     },
     {
       id: 'bombay-royals',
@@ -47,7 +47,7 @@ const ProjectShowcase = () => {
       color: "bg-white",
       highlight: "border-gray-300",
       icon: Heart,
-      link: "https://mahasharmanhealthcare.com"
+      link: "https://squidy-main.github.io/mahasharmanhealthcare/index.html"
     },
     {
       id: 'designer-portfolio',

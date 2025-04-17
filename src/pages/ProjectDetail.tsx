@@ -42,36 +42,36 @@ const projectsData = [
     link: "https://vgsaksham.github.io/elegance.github.io/"
   },
   {
-    id: 'landlite',
-    title: "Landlite",
-    category: "Home Decor",
-    description: "An immersive showcase for premium lighting solutions and home decor products with interactive 3D previews and room visualization.",
+    id: 'glass-decor',
+    title: "Home Decor",
+    category: "Interior Design",
+    description: "A contemporary glass decor showcase featuring premium interior design products with beautiful visuals and interactive elements for enhanced shopping experience.",
     color: "bg-gray-100",
     highlight: "border-gray-500",
     highlightColor: "text-gray-700",
-    fullDescription: `Landlite's digital platform reimagines how customers shop for lighting and home decor by merging beautiful design with innovative technology to showcase their premium product line.
+    fullDescription: `The Home Decor project offers a stunning showcase of premium glass and interior design products through an immersive digital experience that highlights the beauty and craftsmanship of each item.
     
-    Our team created an immersive website that allows customers to explore lighting fixtures in context through interactive room visualizations. The platform's standout feature is the light simulation technology that accurately displays how different fixtures affect a room's ambiance, helping customers make informed decisions.
+    We created a modern, visually-driven platform that allows customers to explore high-end home decor products with interactive elements that showcase materials, dimensions, and styling options. The minimalist design puts focus on product photography with dynamic zoom features that reveal intricate details of each glass piece.
     
-    The admin dashboard provides Landlite's team with comprehensive analytics on customer preferences and behaviors, enabling them to fine-tune their product offerings and marketing strategies based on real user data.`,
-    technologies: ["Vue.js", "Three.js", "WebGL", "Node.js", "MongoDB"],
+    The site includes room visualization tools that help customers envision how different decor items would look in various interior settings. The curated collections feature assists in finding complementary pieces, while the material education section provides information about glass manufacturing techniques and quality characteristics.`,
+    technologies: ["React", "React Router", "Tailwind CSS", "Framer Motion", "Responsive Design"],
     features: [
-      "Interactive room lighting visualizer",
-      "Mood board creator for design planning",
-      "Light color and intensity simulator",
-      "Product comparison tool",
-      "Expert consultation booking system"
+      "Interactive product galleries",
+      "Room visualization tool",
+      "Material education center",
+      "Curated decor collections",
+      "Responsive design for all devices"
     ],
-    client: "Landlite Home Decor",
-    completionDate: "August 2023",
+    client: "Glass Decor Showcase",
+    completionDate: "March 2024",
     projectLink: "#",
     githubLink: "#",
     images: [
-      "/images/landlite_img_1.JPG",
-      "/images/landlite_img_2.JPG",
-      "/images/landlite_img_3.JPG"
+      "/images/glass_decor_img_1.JPG",
+      "/images/glass_decor_img_2.JPG",
+      "/images/glass_decor_img_3.JPG"
     ],
-    link: "https://landlite.in"
+    link: "https://squidy-main.github.io/sample-glass-decor-showcase/#/"
   },
   {
     id: 'bombay-royals',
@@ -135,7 +135,7 @@ const projectsData = [
       "/images/mahasharman_img_2.JPG",
       "/images/mahasharman_img_3.JPG"
     ],
-    link: "https://mahasharmanhealthcare.com"
+    link: "https://squidy-main.github.io/mahasharmanhealthcare/index.html"
   },
   {
     id: 'designer-portfolio',
